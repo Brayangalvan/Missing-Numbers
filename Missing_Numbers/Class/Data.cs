@@ -1,6 +1,5 @@
 ﻿namespace Missing_Numbers.Class
 {
-    using Missing_Numbers.Validations;
     using System;
 
     /// <summary>
@@ -27,7 +26,7 @@
 
             validation.ValidatonVectors(n, m);
 
-            int[] brr = Array.ConvertAll(Console.ReadLine().Split(' '), Int32.Parse);
+            int[] brr = ConvertStringToVectorInt(Console.ReadLine());
             validation.ValidatonSizeVectorAndData(m, brr.Length);
             validation.ValidatonDifferenceBetweenMaximumAndMinimumData(brr);
 

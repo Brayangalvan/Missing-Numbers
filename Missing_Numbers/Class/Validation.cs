@@ -15,7 +15,7 @@
         /// <param name="size"></param>
         public void ValidatonSizeVector(int size)
         {
-            if (size < 0)
+            if (size <= 0)
             {
                 Console.WriteLine("El tamaño del vector debe ser mayor a 0.");
                 Thread.Sleep(2000);
@@ -31,7 +31,7 @@
         /// <param name="data"></param>
         public void ValidatonSizeVectorAndData(int size, int data)
         {
-            if (size == data)
+            if (size < data)
             {
                 Console.WriteLine("Los datos del vector sobre pasan la capacidad establecida.");
                 Thread.Sleep(2000);
@@ -64,7 +64,7 @@
         /// <param name="vector2"></param>
         public void ValidatonDifferenceBetweenMaximumAndMinimumData(int[] vector1)
         {
-            if (vector1.Max() - vector1.Min() < 101)
+            if (vector1.Max() - vector1.Min() > 101)
             {
                 Console.WriteLine("El vector 1 es menor al vector2.");
                 Thread.Sleep(2000);
